@@ -20,6 +20,10 @@ require "sinatra/reloader" if development?
 
 require 'erb'
 
+require 'twitter'
+
+require 'awesome_print'
+
 # Some helper constants for path-centric logic
 APP_ROOT = Pathname.new(File.expand_path('../../', __FILE__))
 
@@ -31,3 +35,10 @@ Dir[APP_ROOT.join('app', 'helpers', '*.rb')].each { |file| require file }
 
 # Set up the database and models
 require APP_ROOT.join('config', 'database')
+
+Twitter.configure do |config|
+  config.consumer_key = "mZuUHvkqmDP3kgEmAzusA"
+  config.consumer_secret = "wEuKwoqMKnbINiRNRL8jhSMtPDJpa3dyesXh3aZ7lY"
+  config.oauth_token = "38251493-I2l6KSsOPoOIWgVXpxWThIPct7kyT4B0WnpPpLJVQ"
+  config.oauth_token_secret = "jGUTmhWTUVtUnVterXbGe7QPjrtnSDDxLZntGzCE4"
+end

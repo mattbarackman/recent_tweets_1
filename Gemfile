@@ -3,6 +3,8 @@ source :rubygems
 # PostgreSQL driver
 gem 'pg'
 
+gem 'twitter'
+
 # Sinatra driver
 gem 'sinatra'
 gem 'sinatra-contrib'
@@ -16,6 +18,8 @@ gem 'activerecord'
 gem 'rake'
 
 gem 'shotgun'
+
+gem 'awesome_print'
 
 group :test do
   gem 'faker'
